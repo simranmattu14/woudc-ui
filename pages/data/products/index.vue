@@ -31,15 +31,46 @@
           <p>{{ $t('data.products.maps.blurb') }}</p>
           <ul>
             <li>
-              <nuxt-link :to="localePath('data-products-ozone_maps')">
-                <span>{{ $t('data.products.ozone_maps.titleSearch') }}</span>
+              <nuxt-link
+                :to="`${localePath('data-products-ozone_maps')}?type=global`"
+              >
+                <span>{{ $t('data.products.ozone_maps.titleGlobal') }}</span>
               </nuxt-link>
             </li>
-            <li v-for="(url, key) in mapsLinks" :key="key">
-              <a :href="url" target="_blank">
-                {{ $t('data.products.maps.links.' + key) }}
-                <v-icon x-small>mdi-open-in-new</v-icon>
-              </a>
+            <li>
+              <nuxt-link
+                :to="`${localePath('data-products-ozone_maps')}?type=northern`"
+              >
+                <span>{{ $t('data.products.ozone_maps.titleNorthern') }}</span>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
+                :to="`${localePath('data-products-ozone_maps')}?type=southern`"
+              >
+                <span>{{ $t('data.products.ozone_maps.titleSouthern') }}</span>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
+                :to="`${localePath('data-products-ozone_maps')}?type=forecast`"
+              >
+                <span>{{ $t('data.products.ozone_maps.titleForecast') }}</span>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
+                :to="`${localePath('data-products-ozone_maps')}?type=observed`"
+              >
+                <span>{{ $t('data.products.ozone_maps.titleObserved') }}</span>
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
+                :to="`${localePath('data-products-ozone_maps')}?type=archive`"
+              >
+                <span>{{ $t('data.products.ozone_maps.titleArchived') }}</span>
+              </nuxt-link>
             </li>
           </ul>
         </div>
@@ -119,20 +150,6 @@ export default {
         },
       ],
     }
-  },
-  computed: {
-    mapsLinks() {
-      const lang = this.$i18n.locale[0] // get "e" or "f"
-      return {
-        // similar key:values as the original mapsLinks from data() placed here,
-        // with the lang var that switches the e/f lang
-        global: `https://exp-studies.tor.ec.gc.ca/clf2/${lang}/Curr_allmap_g.html`,
-        north: `https://exp-studies.tor.ec.gc.ca/clf2/${lang}/Curr_allmap.html`,
-        south: `https://exp-studies.tor.ec.gc.ca/clf2/${lang}/Curr_allmap_s.html`,
-        archive: `https://exp-studies.tor.ec.gc.ca/cgi-bin/clf2/selectMap?lang=${lang}`,
-        individual: `https://exp-studies.tor.ec.gc.ca/cgi-bin/clf2/dailyMaps?lang=${lang}`,
-      }
-    },
   },
   nuxtI18n: {
     paths: {

@@ -1565,7 +1565,13 @@
         "sourcedForecastDesc": "Sources particulières - Prévisions",
         "ozoneMapsInfoArchived": "Informations sur les cartes d’ozone archivées",
         "titleSearch": "Rechercher de cartes de l’ozone",
-        "totalOzoneInDobsonUnits": "Les valeurs de l’ozone total sont exprimées en {dobsonUnits}."
+        "totalOzoneInDobsonUnits": "Les valeurs de l’ozone total sont exprimées en {dobsonUnits}.",
+        "titleArchived": "Rechercher des cartes de l'ozone archivées",
+        "titleObserved": "Rechercher des cartes de l'ozone observées provenant de sources particulières",
+        "titleSouthern": "Cartes de l'ozone total les plus récentes pour l'hémisphère sud",
+        "titleNorthern": "Cartes de l'ozone total les plus récentes pour l'hémisphère nord",
+        "titleGlobal": "Cartes de l'ozone total les plus récentes pour le globe",
+        "titleForecast": "Rechercher des cartes de l'ozone prévu provenant de sources particulières"
       },
       "josieBesos": {
         "title": "Données de l’Expérience d’Intercomparaison des Sondes d’Ozone de Jülich (EISOJ) et l’Expérience de Ballons sur les Standards des Sondes d’Ozone (EBSSO)",
@@ -1578,6 +1584,29 @@
         "metaDescription": "Liens de téléchargement de l'ensemble de données et résumé des produits de données de l'{josie}-{besos} (@:data.products.josieBesos.title).",
         "josieFullName": "Expérience d’Intercomparaison des Sondes d’Ozone de Jülich (EISOJ) ",
         "wccosFullName": "Centre Mondial d’Étalonnage des Sondes d’Ozone (CMESO)"
+      },
+      "normal-ozone-maps": {
+        "title": "Cartes de l'Ozone Normal",
+        "description": "Ces cartes montrent le niveau moyen de 1978-1988 estimé à l'aide des données du spectromètre de cartographie de l'ozone total (TOMS) pour toutes les zones à l'exception de l'Antarctique, ainsi que le niveau d'avant 1980 estimé à l'aide des données de Dobson au-dessus de l'Antarctique.",
+        "global": "Mondial",
+        "northern": "Hémisphère Nord",
+        "southern": "Hémisphère Sud",
+        "globalDesc": "L’ozone total moyen par mois",
+        "northernDesc": "La carte de l’ozone total moyen par mois pour l’hémisphère Nord",
+        "southernDesc": "La carte de l’ozone total moyen par mois pour l’hémisphère Sud",
+        "Images": {
+          "JanDes": "Ozone total moyen en janvier",
+          "FebDes": "Ozone total moyen en février",
+          "MarDes": "Ozone total moyen en mars",
+          "AprilDes": "Ozone total moyen en avril",
+          "MayDes": "Ozone total moyen en mai",
+          "JuneDes": "Ozone total moyen en juin",
+          "JulyDes": "Ozone total moyen en juillet ",
+          "SeptDes": "Ozone total moyen en septembre",
+          "NovDes": "Ozone total moyen en novembre",
+          "OctDes": "Ozone total moyen en octobre",
+          "DecDes": "Ozone total moyen en décembre"
+        }
       }
     },
     "quality": {
