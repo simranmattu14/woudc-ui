@@ -1589,6 +1589,16 @@
         "metaDescription": "Dataset download links and abstract of the {josie}-{besos} data products (@:data.products.josieBesos.title).",
         "josieFullName": "Jülich Ozone Sonde Intercomparison Experiment (JOSIE)",
         "wccosFullName": "World Calibration Centre for Ozone Sondes (WCCOS)"
+      },
+      "normal-ozone-maps": {
+        "title": "Maps of Normal Ozone",
+        "description": "These maps show the mean 1978-1988 level estimated using Total Ozone Mapping Spectrometer (TOMS) data for all areas except the Antarctic and from the pre-1980 level estimated using Dobson data over the Antarctic.",
+        "global": "Global",
+        "globalDesc": "Mean total ozone by month",
+        "northern": "Northern",
+        "southernDesc": "The Mean total ozone by month for the southern hemisphere",
+        "southern": "Southern",
+        "northernDesc": "The Mean total ozone by month for the northern hemisphere"
       }
     },
     "quality": {

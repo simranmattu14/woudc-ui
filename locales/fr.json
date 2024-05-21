@@ -1584,6 +1584,16 @@
         "metaDescription": "Liens de téléchargement de l'ensemble de données et résumé des produits de données de l'{josie}-{besos} (@:data.products.josieBesos.title).",
         "josieFullName": "Expérience d’Intercomparaison des Sondes d’Ozone de Jülich (EISOJ) ",
         "wccosFullName": "Centre Mondial d’Étalonnage des Sondes d’Ozone (CMESO)"
+      },
+      "normal-ozone-maps": {
+        "title": "Cartes de l'Ozone Normal",
+        "description": "Ces cartes montrent le niveau moyen de 1978-1988 estimé à l'aide des données du spectromètre de cartographie de l'ozone total (TOMS) pour toutes les zones à l'exception de l'Antarctique, ainsi que le niveau d'avant 1980 estimé à l'aide des données de Dobson au-dessus de l'Antarctique.",
+        "global": "Mondial",
+        "northern": "Hémisphère Nord",
+        "southern": "Hémisphère Sud", 
+        "globalDesc": "L’ozone total moyen par mois",
+        "northernDesc": "La carte de l’ozone total moyen par mois pour l’hémisphère Nord",
+        "southernDesc": "La carte de l’ozone total moyen par mois pour l’hémisphère Sud"
       }
     },
     "quality": {
