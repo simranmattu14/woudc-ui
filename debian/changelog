@@ -1,3 +1,16 @@
+woudc-ui (2.0.0-beta20) focal; urgency=medium
+
+  * Fixed meta description of josie-besos page
+  * Fixed to incorrect formatting of vue-i18n linked locale messages
+  * Updated text information for ozone maps pages
+  * Fixed to missing links for ozone maps pages
+  * Changed links of ozone map products to the new ozone maps search page with links by individual types and allowing query params for each type
+  * Fixed CSP wildcard directive with script-src sha-*
+  * Fixed Strict-Transport-Security
+  * Fixed nightly redirects
+
+ -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Thur, 16 May 2024 22:10:00 +0000
+
 woudc-ui (2.0.0-beta19) focal; urgency=medium
 
   * Added ozone maps data products search page
