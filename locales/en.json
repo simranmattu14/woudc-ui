@@ -1598,7 +1598,21 @@
         "northern": "Northern",
         "southernDesc": "The Mean total ozone by month for the southern hemisphere",
         "southern": "Southern",
-        "northernDesc": "The Mean total ozone by month for the northern hemisphere"
+        "northernDesc": "The Mean total ozone by month for the northern hemisphere",
+        "Images": {
+          "JanDes": "Mean total ozone in January",
+          "FebDes": "Mean total ozone in February",
+          "MarDes": "Mean total ozone in March",
+          "AprilDes": "Mean total ozone in April",
+          "MayDes": "Mean total ozone in May",
+          "JuneDes": "Mean total ozone in June ",
+          "JulyDes": "Mean total ozone in July ",
+          "AugustDes": "Mean total ozone in August",
+          "SeptDes": "Mean total ozone in September",
+          "NovDes": "Mean total ozone in November",
+          "OctDes": "Mean total ozone in October",
+          "DecDes": "Mean total ozone in December"
+        }
       }
     },
     "quality": {
