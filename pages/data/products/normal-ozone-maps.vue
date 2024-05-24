@@ -49,276 +49,119 @@ export default {
     return {
       baseOzoneClimatologyURL: `${this.$config.WOUDC_UI_WAF_URL}/products/ozone_maps/climatology/`,
       ozoneMapTab: 'global',
+      ozoneMapTypes: ['global', 'northern', 'southern'],
+    }
+  },
+  head() {
+    return {
+      title: this.$t('data.products.normal-ozone-maps.title'),
+      titleTemplate: this.$titleTemplate(
+        this.$t('common.woudc'),
+        this.$t('common.woudcFull')
+      ),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('data.products.normal-ozone-maps.description'),
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.$t('data.products.normal-ozone-maps.keywords'),
+        },
+      ],
     }
   },
   computed: {
     normalOzoneMapsGlobal() {
       const { baseOzoneClimatologyURL } = this
-      return [
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JanDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to01.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.FebDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to02.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.MarDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to03.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.AprilDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to04.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.MayDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to05.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JuneDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to06.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JulyDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to07.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.AugustDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to08.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.SeptDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to09.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.OctDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to10.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.NovDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to11.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.DecDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.global'),
-          url: `${baseOzoneClimatologyURL}/gl_cl/to12.gif`,
-        },
+      const months = [
+        'jan',
+        'feb',
+        'mar',
+        'apr',
+        'may',
+        'jun',
+        'jul',
+        'aug',
+        'sept',
+        'oct',
+        'nov',
+        'dec',
       ]
+      const ozoneMaps = months.map((month, index) => {
+        const paddedNumber = (index + 1).toString().padStart(2, '0')
+        const caption = this.$t(
+          `data.products.normal-ozone-maps.captions.globe.${month}`
+        )
+        const url = `${baseOzoneClimatologyURL}/gl_cl/to${paddedNumber}.gif`
+        return { caption, url }
+      })
+
+      return ozoneMaps
     },
     normalOzoneMapsNorthern() {
       const { baseOzoneClimatologyURL } = this
-      return [
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JanDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to01.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.FebDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to02.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.MarDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to03.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.AprilDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to04.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.MayDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to05.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JuneDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to06.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JulyDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to07.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.AugustDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to08.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.SeptDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to09.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.OctDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to10.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.NovDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to11.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.DecDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.northern'),
-          url: `${baseOzoneClimatologyURL}/nh_cl/to12.gif`,
-        },
+      const months = [
+        'jan',
+        'feb',
+        'mar',
+        'apr',
+        'may',
+        'jun',
+        'jul',
+        'aug',
+        'sept',
+        'oct',
+        'nov',
+        'dec',
       ]
+      const ozoneMaps = months.map((month, index) => {
+        const paddedNumber = (index + 1).toString().padStart(2, '0')
+        const caption = this.$t(
+          `data.products.normal-ozone-maps.captions.northern.${month}`
+        )
+        const url = `${baseOzoneClimatologyURL}/nh_cl/to${paddedNumber}.gif`
+        return { caption, url }
+      })
+
+      return ozoneMaps
     },
+
     normalOzoneMapsSouthern() {
       const { baseOzoneClimatologyURL } = this
-      return [
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JanDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to01.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.FebDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to02.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.MarDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to03.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.AprilDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to04.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.MayDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to05.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JuneDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to06.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.JulyDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to07.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.AugustDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to08.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.SeptDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to09.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.OctDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to10.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.NovDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to11.gif`,
-        },
-        {
-          caption:
-            this.$t('data.products.normal-ozone-maps.Images.DecDes') +
-            ' / ' +
-            this.$t('data.products.normal-ozone-maps.southern'),
-          url: `${baseOzoneClimatologyURL}/sh_cl/to12.gif`,
-        },
+      const months = [
+        'jan',
+        'feb',
+        'mar',
+        'apr',
+        'may',
+        'jun',
+        'jul',
+        'aug',
+        'sept',
+        'oct',
+        'nov',
+        'dec',
       ]
+      const ozoneMaps = months.map((month, index) => {
+        const paddedNumber = (index + 1).toString().padStart(2, '0')
+        const caption = this.$t(
+          `data.products.normal-ozone-maps.captions.southern.${month}`
+        )
+        const url = `${baseOzoneClimatologyURL}/sh_cl/to${paddedNumber}.gif`
+        return { caption, url }
+      })
+
+      return ozoneMaps
     },
+  },
+  created() {
+    const sanitizedOzoneType = encodeURIComponent(this.$route.query.type)
+    if (this.ozoneMapTypes.includes(sanitizedOzoneType)) {
+      this.ozoneMapTab = sanitizedOzoneType
+    }
   },
 }
 </script>

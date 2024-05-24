@@ -1586,26 +1586,60 @@
         "wccosFullName": "Centre Mondial d’Étalonnage des Sondes d’Ozone (CMESO)"
       },
       "normal-ozone-maps": {
-        "title": "Cartes de l'Ozone Normal",
+        "title": "Cartes de l'ozone normal",
         "description": "Ces cartes montrent le niveau moyen de 1978-1988 estimé à l'aide des données du spectromètre de cartographie de l'ozone total (TOMS) pour toutes les zones à l'exception de l'Antarctique, ainsi que le niveau d'avant 1980 estimé à l'aide des données de Dobson au-dessus de l'Antarctique.",
+        "keywords": "cartes normales de l'ozone, cartes de l'ozone, global, hémisphère sud, hémisphère nord, globe, ozone total moyen, ozone total, cartes de l'ozone normal",
         "global": "Mondial",
         "northern": "Hémisphère Nord",
         "southern": "Hémisphère Sud",
         "globalDesc": "L’ozone total moyen par mois",
         "northernDesc": "La carte de l’ozone total moyen par mois pour l’hémisphère Nord",
         "southernDesc": "La carte de l’ozone total moyen par mois pour l’hémisphère Sud",
-        "Images": {
-          "JanDes": "Ozone total moyen en janvier",
-          "FebDes": "Ozone total moyen en février",
-          "MarDes": "Ozone total moyen en mars",
-          "AprilDes": "Ozone total moyen en avril",
-          "MayDes": "Ozone total moyen en mai",
-          "JuneDes": "Ozone total moyen en juin",
-          "JulyDes": "Ozone total moyen en juillet ",
-          "SeptDes": "Ozone total moyen en septembre",
-          "NovDes": "Ozone total moyen en novembre",
-          "OctDes": "Ozone total moyen en octobre",
-          "DecDes": "Ozone total moyen en décembre"
+        "captions": {
+          "globe": {
+            "jan": "L'ozone total moyen pour le globe en janvier.",
+            "feb": "L'ozone total moyen pour le globe en février.",
+            "mar": "L'ozone total moyen pour le globe en mars.",
+            "apr": "L'ozone total moyen pour le globe en avril.",
+            "may": "L'ozone total moyen pour le globe en mai.",
+            "jun": "L'ozone total moyen pour le globe en juin.",
+            "jul": "L'ozone total moyen pour le globe en juillet.",
+            "aug": "L'ozone total moyen pour le globe en août.",
+            "sept": "L'ozone total moyen pour le globe en septembre.",
+            "oct": "L'ozone total moyen pour le globe en octobre.",
+            "nov": "L'ozone total moyen pour le globe en novembre.",
+            "dec": "L'ozone total moyen pour le globe en décembre."
+          },
+          "northern": {
+            "jan": "L'ozone total moyen pour l’hémisphère Nord en janvier.",
+            "feb": "L'ozone total moyen pour l’hémisphère Nord en février.",
+            "mar": "L'ozone total moyen pour l’hémisphère Nord en mars.",
+            "apr": "L'ozone total moyen pour l’hémisphère Nord en avril.",
+            "may": "L'ozone total moyen pour l’hémisphère Nord en mai.",
+            "jun": "L'ozone total moyen pour l’hémisphère Nord en juin.",
+            "jul": "L'ozone total moyen pour l’hémisphère Nord en juillet.",
+            "aug": "L'ozone total moyen pour l’hémisphère Nord en août.",
+            "sept": "L'ozone total moyen pour l’hémisphère Nord en septembre.",
+            "oct": "L'ozone total moyen pour l’hémisphère Nord en octobre.",
+            "nov": "L'ozone total moyen pour l’hémisphère Nord en novembre.",
+            "dec": "L'ozone total moyen pour l’hémisphère Nord en décembre."
+          },
+          "southern": {
+            "jan": "L'ozone total moyen pour l’hémisphère Sud en janvier.",
+            "feb": "L'ozone total moyen pour l’hémisphère Sud en février.",
+            "mar": "L'ozone total moyen pour l’hémisphère Sud en mars.",
+            "apr": "L'ozone total moyen pour l’hémisphère Sud en avril.",
+            "may": "L'ozone total moyen pour l’hémisphère Sud en mai.",
+            "jun": "L'ozone total moyen pour l’hémisphère Sud en juin.",
+            "jul": "L'ozone total moyen pour l’hémisphère Sud en juillet.",
+            "aug": "L'ozone total moyen pour l’hémisphère Sud en août.",
+            "sept": "L'ozone total moyen pour l’hémisphère Sud en septembre.",
+            "oct": "L'ozone total moyen pour l’hémisphère Sud en octobre.",
+            "nov": "L'ozone total moyen pour l’hémisphère Sud en novembre.",
+            "dec": "L'ozone total moyen pour l’hémisphère Sud en décembre."
+          },
+          "beginning": "L'ozone total moyen pour le",
+          "globle": "globe"
         }
       }
     },

@@ -1591,27 +1591,60 @@
         "wccosFullName": "World Calibration Centre for Ozone Sondes (WCCOS)"
       },
       "normal-ozone-maps": {
-        "title": "Maps of Normal Ozone",
+        "title": "Maps of normal ozone",
         "description": "These maps show the mean 1978-1988 level estimated using Total Ozone Mapping Spectrometer (TOMS) data for all areas except the Antarctic and from the pre-1980 level estimated using Dobson data over the Antarctic.",
+        "keywords": "normal ozone maps, ozone maps, global, southen hemisphere, northern hemisphere, globle, Mean total ozone, total ozone, maps of normal ozone",
         "global": "Global",
         "globalDesc": "Mean total ozone by month",
         "northern": "Northern",
-        "southernDesc": "The Mean total ozone by month for the southern hemisphere",
+        "southernDesc": "The mean total ozone by month for the southern hemisphere",
         "southern": "Southern",
-        "northernDesc": "The Mean total ozone by month for the northern hemisphere",
-        "Images": {
-          "JanDes": "Mean total ozone in January",
-          "FebDes": "Mean total ozone in February",
-          "MarDes": "Mean total ozone in March",
-          "AprilDes": "Mean total ozone in April",
-          "MayDes": "Mean total ozone in May",
-          "JuneDes": "Mean total ozone in June ",
-          "JulyDes": "Mean total ozone in July ",
-          "AugustDes": "Mean total ozone in August",
-          "SeptDes": "Mean total ozone in September",
-          "NovDes": "Mean total ozone in November",
-          "OctDes": "Mean total ozone in October",
-          "DecDes": "Mean total ozone in December"
+        "northernDesc": "The mean total ozone by month for the northern hemisphere",
+        "captions": {
+          "globe": {
+            "jan": "The mean total ozone for the globe in January.",
+            "feb": "The mean total ozone for the globle in February.",
+            "mar": "The mean total ozone for the globle in March.",
+            "apr": "The mean total ozone for the globle in April.",
+            "may": "The mean total ozone for the globle in May.",
+            "jun": "The mean total ozone for the globle in June.",
+            "jul": "The mean total ozone for the globle in July.",
+            "aug": "The mean total ozone for the globle in August.",
+            "sept": "The mean total ozone for the globle in September.",
+            "oct": "The mean total ozone for the globle in October.",
+            "nov": "The mean total ozone for the globle in November.",
+            "dec": "The mean total ozone for the globle in December."
+          },
+          "northern": {
+            "jan": "The mean total ozone for the northern hemisphere in January.",
+            "feb": "The mean total ozone for the northern hemisphere in February.",
+            "mar": "The mean total ozone for the northern hemisphere in March.",
+            "apr": "The mean total ozone for the northern hemisphere in April.",
+            "may": "The mean total ozone for the northern hemisphere in May.",
+            "jun": "The mean total ozone for the northern hemisphere in June.",
+            "jul": "The mean total ozone for the northern hemisphere in July.",
+            "aug": "The mean total ozone for the northern hemisphere in August.",
+            "sept": "The mean total ozone for the northern hemisphere in September.",
+            "oct": "The mean total ozone for the northern hemisphere in October.",
+            "nov": "The mean total ozone for the northern hemisphere in November.",
+            "dec": "The mean total ozone for the northern hemisphere in December."
+          },
+          "southern": {
+            "jan": "The mean total ozone for the southern hemisphere in January.",
+            "feb": "The mean total ozone for the southern hemisphere in February.",
+            "mar": "The mean total ozone for the southern hemisphere in March.",
+            "apr": "The mean total ozone for the southern hemisphere in April.",
+            "may": "The mean total ozone for the southern hemisphere in May.",
+            "jun": "The mean total ozone for the southern hemisphere in June.",
+            "jul": "The mean total ozone for the southern hemisphere in July.",
+            "aug": "The mean total ozone for the southern hemisphere in August.",
+            "sept": "The mean total ozone for the southern hemisphere in September.",
+            "oct": "The mean total ozone for the southern hemisphere in October.",
+            "nov": "The mean total ozone for the southern hemisphere in November.",
+            "dec": "The mean total ozone for the southern hemisphere in December."
+          },
+          "beginning": "The mean total ozone for the ",
+          "globle": "globe"
         }
       }
     },
