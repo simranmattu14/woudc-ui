@@ -248,7 +248,7 @@
         <v-btn class="btn-middle" :disabled="loadingAll" @click="reset()">
           {{ $t('common.reset') }}
         </v-btn>
-        <v-dialog scrollable max-width="1000px">
+        <v-dialog v-model="dialog" scrollable max-width="1000px">
           <template #activator="{ on, attrs }">
             <v-btn
               class="btn-right"
@@ -521,6 +521,7 @@ export default {
       stations: [],
       stationsWithMetadata: [],
       stationOrder: 'name',
+      dialog: false,
     }
   },
   head() {
@@ -1302,20 +1303,90 @@ export default {
       const Limit = itemsPerPage
 
       if (this.selectedDatasetID === 'uv_index_hourly') {
-        this.query = `${UVIndexURL}?${queryParams}`
+        this.query = UVIndexURL + '?' + queryParams
+        let response = await woudcClient.get(
+          UVIndexURL +
+            '?offset=' +
+            offset +
+            '&limit=' +
+            Limit +
+            '&' +
+            queryParams
+        )
+        this.numberMatched = response.data.numberMatched
+        this.dataRecords = response.data.features.map(stripProperties)
       } else if (this.selectedDatasetID === 'TotalOzone_1.0') {
-        this.query = `${totalOzoneURL}?${queryParams}`
+        this.query = totalOzoneURL + '?' + queryParams
+        let response = await woudcClient.get(
+          totalOzoneURL +
+            '?offset=' +
+            offset +
+            '&limit=' +
+            Limit +
+            '&' +
+            queryParams
+        )
+        this.numberMatched = response.data.numberMatched
+        this.dataRecords = response.data.features.map(stripProperties)
       } else if (
         (this.selectedDatasetID === 'peer_data_records') |
         (this.selectedDatasetID === 'ndacc_total') |
         (this.selectedDatasetID === 'ndacc_uv') |
         (this.selectedDatasetID === 'ndacc_vertical')
       ) {
-        this.query = `${peerDataRecordsURL}?${queryParams}`
+        this.query = peerDataRecordsURL + '?' + queryParams
+
+        let response = await woudcClient.get(
+          peerDataRecordsURL +
+            '?offset=' +
+            offset +
+            '&limit=' +
+            Limit +
+            '&' +
+            queryParams
+        )
+        this.numberMatched = response.data.numberMatched
+        this.dataRecords = response.data.features.map(stripProperties)
       } else if (this.selectedDatasetID === 'OzoneSonde_1.0') {
-        this.query = `${ozoneSondeURL}?${queryParams}`
+        this.query = ozoneSondeURL + '?' + queryParams
+        let response = await woudcClient.get(
+          ozoneSondeURL + '?offset=' + page + '&limit=1' + '&' + queryParams
+        )
+        this.numberMatched =
+          response.data.numberMatched * this.options.itemsPerPage
+        let r = []
+        let totalLength = 0
+        // results are first few entries of every file
+        for (let i = 0; i < response.data.features.length; i++) {
+          const length = response.data.features[i].properties.pressure.length
+          for (let j = 0; j < length; j++) {
+            const index = totalLength + j
+            if (index < this.options.itemsPerPage) {
+              r[index] = JSON.parse(JSON.stringify(response.data.features[i]))
+              r[index].properties.o3partialpressure =
+                response.data.features[i].properties.o3partialpressure[j]
+              r[index].properties.pressure =
+                response.data.features[i].properties.pressure[j]
+              r[index].properties.temperature =
+                response.data.features[i].properties.temperature[j]
+            }
+          }
+          totalLength += length
+        }
+        this.dataRecords = r.map(stripProperties)
       } else {
-        this.query = `${dataRecordsURL}?${queryParams}`
+        this.query = dataRecordsURL + '?' + queryParams
+        let response = await woudcClient.get(
+          dataRecordsURL +
+            '?offset=' +
+            offset +
+            '&limit=' +
+            Limit +
+            '&' +
+            queryParams
+        )
+        this.numberMatched = response.data.numberMatched
+        this.dataRecords = response.data.features.map(stripProperties)
       }
       this.queryPaginated = `${this.query}&offset=${offset}&limit=${Limit}&f=json`
     },
