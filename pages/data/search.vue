@@ -1165,7 +1165,7 @@ export default {
 
       this.refreshMetrics()
     },
-    generateQueryURL(paginate = false) {
+    async generateQueryURL(paginate = false) {
       this.query = null
       this.queryPaginated = null
 
